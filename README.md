@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## About Next JS Routing
 
-## Getting Started
+1. Next JS uses a “file-based” router system.
 
-First, run the development server:
+2. In React we used to import Navbar(which contains links for every page or route) in every page. But in NextJS we just have to import it in `layout.jsx` and create `about/page.tsx` in `app` folder.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+3. Simple Route is `app/about` and `app/contact`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Nested Route is `app/projects/lists`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+5. Dynamic Route is `app/projects/[name]` here square bracket is complusary.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+6. Route Groups:
+   Helps organize folders and prevent unnecessary naming in url for instance `www.devflow.com/auth/sign-in` but we need `wwww.devflow.com/sign-in`.
 
-## Learn More
+   `(auth)/sign-in & sign-up` here auth is route group and the parenthesis is compulsary for creating a route group
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+          > app
+            > auth
+              > sign-in
+                > page.jsx (url would be => /auth/sign-in)
+              > sign-up
+                > page.jsx (url => /auth/sign-up)
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+7. Now we can transfer about, contact and project folders in dashboard for Group Routing.
+   Now the url for project carrnet is
+   `http://localhost:3000/projects/lists`
+   instead of
+   `http://localhost:3000/dashboard/projects/lists` this url is not a proper method to show on applications.
