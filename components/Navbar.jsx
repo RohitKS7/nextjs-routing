@@ -10,11 +10,26 @@ const Navbar = () => {
           <Link href="/">
             <li>Home 🏠</li>
           </Link>
-          <Link href="/about">
-            <li>About 🐶</li>
+          <Link href="/products/productList">
+            <li>Products 🐶</li>
           </Link>
-          <Link href="/contact">
-            <li>Contact ☎️</li>
+          <Link href="/cart">
+            <li>Cart ☎️</li>
+          </Link>
+          <Link href="/checkout">
+            <li>Checkout</li>
+          </Link>
+          <Link href="/order">
+            <li>Order confirmation</li>
+          </Link>
+          <Link href="/user">
+            <li>User Account</li>
+          </Link>
+          <Link href="/login">
+            <li>Login</li>
+          </Link>
+          <Link href="/register">
+            <li>Registration</li>
           </Link>
         </ul>
       </nav>
